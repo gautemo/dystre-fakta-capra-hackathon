@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import useOnScreen from '../hooks/useOnScreen';
 import { OverlayText } from '../OverlayText';
 import styles from './DeadAnimals.module.css';
 
@@ -22,11 +23,16 @@ const initial = [
 ];
 
 export function DeadAnimals() {
+  const ref = useRef<HTMLElement>(null);
   const [animals, setAnimals] = useState<Animal[]>(
     Array(80).fill(initial).flat()
   );
 
+  const isVisible = useOnScreen(ref);
   const updateAnimals = () => {
+    if(!isVisible){
+      return
+    }
     let kill = random(animals.length);
     while (!animals[kill].alive) {
       kill = random(animals.length);
@@ -39,10 +45,10 @@ export function DeadAnimals() {
   useEffect(() => {
     const t = setTimeout(updateAnimals, 100);
     return () => clearTimeout(t);
-  }, [animals]);
+  }, [animals, isVisible]);
 
   return (
-    <section className={styles.grid}>
+    <section className={styles.grid} ref={ref}>
       {animals.map((animal, i) => (
         <span key={i}>{animal.emoji}</span>
       ))}
