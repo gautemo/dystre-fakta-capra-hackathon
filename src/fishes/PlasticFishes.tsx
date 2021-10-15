@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import useOnScreen from '../hooks/useOnScreen';
 import { OverlayText } from '../OverlayText';
 import { Fish } from './Fish';
 import styles from './Page.module.css';
@@ -21,9 +22,29 @@ const isPlastic = (): boolean => {
 const MAX_FISHES = 25;
 
 export const PlasticFishes = () => {
+  const ref = useRef<HTMLElement>(null);
+  const isVisible = useOnScreen(ref);
   const [fishes, setFishes] = useState<React.ReactNode[]>([]);
 
   useEffect(() => {
+    const listener = () => {
+      if (document.hidden) {
+        setFishes([]);
+      }
+    };
+    document.addEventListener('visibilitychange', listener);
+    return () =>
+      document.removeEventListener('visibilitychange', listener);
+  }, []);
+
+  useEffect(() => {
+    setFishes([]);
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) {
+      return;
+    }
     const interval = setInterval(() => {
       const slicedFishes =
         fishes.length >= MAX_FISHES ? fishes.slice(1) : fishes;
@@ -39,10 +60,10 @@ export const PlasticFishes = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [fishes]);
+  }, [fishes, isVisible]);
 
   return (
-    <section className={styles.ocean}>
+    <section className={styles.ocean} ref={ref}>
       {fishes.map((Fish) => Fish)}
       <OverlayText
         text={
