@@ -38,6 +38,8 @@
 }
 .dumpsection {
     position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .overlayText {
   position: absolute;
