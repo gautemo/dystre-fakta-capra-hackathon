@@ -1,0 +1,56 @@
+@keyframes slideright {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideleft {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+.clouds1 {
+  animation-name: slideright;
+  animation-duration: 180s;
+}
+
+.clouds2 {
+  animation-name: slideleft;
+  animation-duration: 50s;
+}
+
+.clouds3 {
+  animation-name: slideright;
+  animation-duration: 40s;
+}
+
+.dumptruck {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #42dcff;
+}
+.dumpsection {
+    position: relative;
+}
+.overlayText {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #00000085;
+}
+
+.overlaySource {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
