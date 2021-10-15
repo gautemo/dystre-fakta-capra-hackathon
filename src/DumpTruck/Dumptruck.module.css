@@ -1,0 +1,37 @@
+@keyframes slideright {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(60%);
+    }
+    to {
+        transform: translateX(-40%);
+    }
+}
+  
+
+.dumptruck {
+    
+}
+
+.clouds1 {
+    animation-name: slideright;
+    animation-duration: 180s;
+}
+
+.clouds2 {
+    animation-name: slideleft;
+    animation-duration: 9s;
+}
+
+.clouds3 {
+    animation-name: slideright;
+    animation-duration: 40s;
+}
