@@ -1,0 +1,64 @@
+.sea{
+  background: #006274;
+  color: white;
+  overflow: hidden;
+}
+
+.content{
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  grid-template: 1fr auto / 1fr  auto auto;
+  inset: 0;
+  padding: 2rem;
+}
+
+.content h1{
+  grid-column: 1 / -1;
+}
+
+.content h2{
+  color: #006274;
+}
+
+.container{
+  position: absolute;
+  inset: 0;
+}
+
+.oil{
+  height: 1px;
+  background: black;
+}
+
+.sink{
+  animation: forwards sink 20s linear;
+}
+
+.wave {
+  animation: wave 8s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sink {
+  from {
+    height: 1px;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

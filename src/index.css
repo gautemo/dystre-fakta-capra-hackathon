@@ -1,18 +1,19 @@
-body{
+body {
   margin: 0;
 }
 
-main{
+main {
   scroll-snap-type: y mandatory;
   height: 100vh;
   overflow: auto;
 }
 
-main > section{
+main > section {
   height: 100%;
   scroll-snap-align: start;
+  position: relative;
 }
 
-main > section:not(:first-child){
+main > section:not(:first-child) {
   margin-top: 1rem;
 }
