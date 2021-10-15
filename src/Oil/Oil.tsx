@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import useOnScreen from '../hooks/useOnScreen';
+import { OverlayText } from '../OverlayText';
 import styles from './Oil.module.css';
 
 export function Oil() {
@@ -9,15 +10,16 @@ export function Oil() {
   return (
     <section className={styles.sea} ref={ref}>
       <div className={styles.content}>
-        <h1>85 liter olje havner i havet hvert sekund</h1>
+        <OverlayText
+          text="85 liter olje havner i havet hvert sekund"
+          source="http://www.waterencyclopedia.com/Oc-Po/Oil-Spills-Impact-on-the-Ocean.html"
+          yPos={15}
+          light
+        />
         <h2>
           Det er nok til å fylle en gjennomsnittsleilighet i Norge på
           under 1 time!
         </h2>
-        <p>
-          Kilde:
-          http://www.waterencyclopedia.com/Oc-Po/Oil-Spills-Impact-on-the-Ocean.html
-        </p>
       </div>
       <div className={styles.container}>
         <div

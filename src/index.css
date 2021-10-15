@@ -17,3 +17,23 @@ main > section {
 main > section:not(:first-child) {
   margin-top: 1rem;
 }
+
+.overlay-text {
+  position: absolute;
+  top: var(--y-pos, 70%);
+  left: 0;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #00000085;
+}
+
+.overlay-text.light{
+  background-color: #b7b7b785;
+}
+
+.overlay-source {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}

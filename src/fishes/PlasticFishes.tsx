@@ -1,20 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { OverlayText } from '../OverlayText';
 import { Fish } from './Fish';
 import styles from './Page.module.css';
-
-interface OverlayTextProps {
-  text: string;
-  source?: string;
-}
-
-const OverlayText = ({ source, text }: OverlayTextProps) => {
-  return (
-    <div className={styles.overlayText}>
-      {text}
-      <div className={styles.overlaySource}>Kilde: {source}</div>
-    </div>
-  );
-};
 
 const getRandomSize = (): 'small' | 'medium' | 'large' => {
   const rand = Math.random();
