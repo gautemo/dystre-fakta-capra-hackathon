@@ -14,6 +14,10 @@ const getRandomSize = (): 'small' | 'medium' | 'large' => {
   }
 };
 
+const isPlastic = (): boolean => {
+  return Math.random() > 0.66;
+};
+
 const MAX_FISHES = 25;
 
 export const PlasticFishes = () => {
@@ -25,7 +29,11 @@ export const PlasticFishes = () => {
         fishes.length >= MAX_FISHES ? fishes.slice(1) : fishes;
       setFishes([
         ...slicedFishes,
-        <Fish size={getRandomSize()} key={`${Math.random()}`} />,
+        <Fish
+          size={getRandomSize()}
+          key={`${Math.random()}`}
+          withPlastic={isPlastic()}
+        />,
       ]);
     }, 800);
     return () => {
@@ -37,7 +45,9 @@ export const PlasticFishes = () => {
     <section className={styles.ocean}>
       {fishes.map((Fish) => Fish)}
       <OverlayText
-        text={'Hver tredje fisk innehar plastikk'}
+        text={
+          'En av tre fisker fanget av mennekser inneholder plastikk'
+        }
         source={
           'https://www.condorferries.co.uk/plastic-in-the-ocean-statistics'
         }

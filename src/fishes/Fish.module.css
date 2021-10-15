@@ -53,3 +53,13 @@
 .fish-large {
   animation: svim 8s linear forwards;
 }
+
+@keyframes wiggle {
+  50% {
+    transform: rotate();
+  }
+}
+
+.plasticGlass {
+  transform: rotate(90deg) translateY(-140%) translateX(-25%);
+}
