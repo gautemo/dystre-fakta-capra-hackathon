@@ -29,7 +29,7 @@ main > section:not(:first-child) {
   background-color: #00000085;
 }
 
-.overlay-text.light{
+.overlay-text.light {
   background-color: #b7b7b785;
 }
 

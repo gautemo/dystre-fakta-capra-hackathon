@@ -6,9 +6,14 @@ interface Props {
 }
 
 export const OverlayText = ({ source, text, yPos, light }: Props) => {
-  const style = { '--y-pos': yPos ? `${yPos}%` : undefined } as React.CSSProperties
+  const style = {
+    '--y-pos': yPos ? `${yPos}%` : undefined,
+  } as React.CSSProperties;
   return (
-    <div className={`overlay-text ${light ? 'light' : ''}`} style={style}>
+    <div
+      className={`overlay-text ${light ? 'light' : ''}`}
+      style={style}
+    >
       {text}
       <div className="overlay-source">Kilde: {source}</div>
     </div>
