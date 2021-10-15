@@ -1,37 +1,37 @@
-.sea{
+.sea {
   background: #006274;
   color: white;
   overflow: hidden;
 }
 
-.content{
+.content {
   position: absolute;
   z-index: 2;
   display: grid;
-  grid-template: 1fr auto / 1fr  auto auto;
+  grid-template: 1fr auto / 1fr auto auto;
   inset: 0;
   padding: 2rem;
 }
 
-.content h1{
+.content h1 {
   grid-column: 1 / -1;
 }
 
-.content h2{
+.content h2 {
   color: #006274;
 }
 
-.container{
+.container {
   position: absolute;
   inset: 0;
 }
 
-.oil{
+.oil {
   height: 1px;
   background: black;
 }
 
-.sink{
+.sink {
   animation: forwards sink 20s linear;
 }
 
@@ -60,5 +60,7 @@
 }
 
 @keyframes spin {
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
