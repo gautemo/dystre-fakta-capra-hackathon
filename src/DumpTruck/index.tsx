@@ -2,20 +2,7 @@ import styles from './Dumptruck.module.css';
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import Rock from './Rock';
-
-interface OverlayTextProps {
-  text: string;
-  source?: string;
-}
-
-const OverlayText = ({ source, text }: OverlayTextProps) => {
-  return (
-    <div className={styles.overlayText}>
-      {text}
-      <div className={styles.overlaySource}>Kilde: {source}</div>
-    </div>
-  );
-};
+import { OverlayText } from '../OverlayText';
 
 const getRandomSize = (): 'small' | 'medium' | 'large' => {
   const rand = Math.random();

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
 body {
   margin: 0;
+  font-family: 'Mitr', sans-serif;
 }
 
 main {
@@ -36,4 +39,5 @@ main > section:not(:first-child) {
 .overlay-source {
   font-size: 0.9rem;
   margin-top: 5px;
+  font-weight: 100;
 }
