@@ -3,6 +3,7 @@ import { Demo } from './DemoCard/Demo';
 import { PlasticFishes } from './fishes/PlasticFishes';
 import { Oil } from './Oil/Oil';
 import DumpTruck from './DumpTruck';
+import { PlasticBagGarbage } from './PlasticBagGarbage/PlasticBagGarbage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <DumpTruck />
       <Oil />
       <DeadAnimals />
+      <PlasticBagGarbage />
     </main>
   );
 }
