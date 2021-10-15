@@ -4,7 +4,7 @@ import useOnScreen from '../hooks/useOnScreen';
 import { OverlayText } from '../OverlayText';
 import styles from './PlasticBagGarbage.module.css';
 
-const MAX_NUM_BAGS = 80;
+const MAX_NUM_BAGS = 50;
 
 export const PlasticBagGarbage = () => {
   const scene = useRef<HTMLElement>(null);
@@ -74,7 +74,7 @@ export const PlasticBagGarbage = () => {
       const ball = Bodies.circle(
         clientWidth * Math.random(),
         20,
-        30 + Math.random() * 30,
+        50 + Math.random() * window.innerWidth * 0.06,
         {
           mass: 10,
           restitution: 0.9,
