@@ -56,7 +56,7 @@ export const PlasticFishes = () => {
           withPlastic={isPlastic()}
         />,
       ]);
-    }, 800);
+    }, 400);
     return () => {
       clearInterval(interval);
     };

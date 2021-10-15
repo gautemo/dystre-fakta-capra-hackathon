@@ -5,7 +5,7 @@ import { PlasticBag } from './PlasticBag';
 export type FishSize = 'small' | 'medium' | 'large';
 
 export const getPixelSize = (size: FishSize): number => {
-  return size === 'small' ? 50 : size === 'medium' ? 100 : 150;
+  return size === 'small' ? 100 : size === 'medium' ? 150 : 200;
 };
 interface Props {
   size: FishSize;

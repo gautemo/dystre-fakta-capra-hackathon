@@ -15,7 +15,9 @@ export const OverlayText = ({ source, text, yPos, light }: Props) => {
       style={style}
     >
       {text}
-      <div className="overlay-source">Kilde: {source}</div>
+      {source && (
+        <div className="overlay-source">Kilde: {source}</div>
+      )}
     </div>
   );
 };
