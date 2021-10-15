@@ -1,4 +1,4 @@
-import { DumpTruck } from "../DumpTruck";
+import styles from './Demo.module.css';
 
 export function Demo() {
   return (
@@ -6,7 +6,6 @@ export function Demo() {
       <span>buhu :'(</span>
       <h1>
       </h1>
-      <DumpTruck />
     </section>
   );
 }

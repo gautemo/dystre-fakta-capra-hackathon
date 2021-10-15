@@ -1,0 +1,26 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes falling {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(340%);
+    }
+
+}
+
+.rock {
+    /* animation: rotation 2s infinite linear; */
+    animation-name: falling;
+    animation-duration: 20s;
+    position: absolute;
+    z-index: 2000;
+}
