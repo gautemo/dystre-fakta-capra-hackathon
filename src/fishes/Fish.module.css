@@ -1,0 +1,55 @@
+@keyframes moveEye {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.fishEye {
+  animation: moveEye 3s ease infinite;
+}
+
+@keyframes moveFinne {
+  50% {
+    transform: translateX(10px) translateY(10px);
+  }
+}
+
+.topFinne {
+  animation: moveFinne 0.5s ease infinite;
+}
+
+.bottomFinne {
+  animation: moveFinne 1s ease infinite;
+}
+
+@keyframes svim {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes svimUp {
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.fish {
+  position: absolute;
+}
+
+.fish-small {
+  animation: svim 3s linear forwards;
+}
+
+.fish-medium {
+  animation: svim 6s linear forwards;
+}
+
+.fish-large {
+  animation: svim 8s linear forwards;
+}

@@ -1,0 +1,22 @@
+.ocean {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #42dcff;
+  position: relative;
+}
+
+.overlayText {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #00000085;
+}
+
+.overlaySource {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
