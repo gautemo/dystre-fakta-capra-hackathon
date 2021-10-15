@@ -1,10 +1,11 @@
+import styles from './Demo.module.css';
+
 export function Demo() {
   return (
-    <section>
-      <h1>
-        buhu
-        :'(-------------------------------------------------------------------------------------------------------------------
-      </h1>
+    <section className={styles.card}>
+      <span>
+        buhu :'(
+      </span>
     </section>
   );
 }
