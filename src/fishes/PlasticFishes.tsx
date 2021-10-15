@@ -37,7 +37,7 @@ export const PlasticFishes = () => {
       const slicedFishes =
         fishes.length >= MAX_FISHES ? fishes.slice(1) : fishes;
       setFishes([
-        ...fishes,
+        ...slicedFishes,
         <Fish size={getRandomSize()} key={`${Math.random()}`} />,
       ]);
     }, 800);
