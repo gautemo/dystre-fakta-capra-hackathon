@@ -28,7 +28,7 @@ export const PlasticFishes = () => {
 
   useEffect(() => {
     const listener = () => {
-      if (document.hidden) {
+      if (!document.hidden) {
         setFishes([]);
       }
     };
