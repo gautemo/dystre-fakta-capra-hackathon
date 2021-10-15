@@ -22,10 +22,12 @@ const initial = [
   { emoji: '🐚', alive: true },
 ];
 
+const placeFor = Math.ceil((window.innerWidth * window.innerHeight) / 10_000)
+
 export function DeadAnimals() {
   const ref = useRef<HTMLElement>(null);
   const [animals, setAnimals] = useState<Animal[]>(
-    Array(80).fill(initial).flat()
+    Array(placeFor).fill(initial).flat()
   );
 
   const isVisible = useOnScreen(ref);
